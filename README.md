@@ -22,9 +22,9 @@ import sys
 if you want to install package to **Python3** kernel:
 ```
 pip install numpy
-```
+
 or 
-```
+
 python -m install numpy
 ```
 
@@ -32,4 +32,18 @@ if you want to install package to other kernel, first list all enverinments:
 ```
 conda env list
 ```
-*jupyterhub* environment refers to **Python3** kernel
+*jupyterhub* environment refers to **Python3** kernel. 
+```
+conda activate <env-name>
+pip install numpy
+```
+In order to deactivate conda environment:
+```
+conda deactivate
+```
+To check which python or pip you use:
+```
+which python
+which pip
+```
+
