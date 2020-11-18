@@ -17,6 +17,7 @@ Best way (because it will install package to the current kernel of notebook):
 import sys
 !{sys.executable} -m pip install numpy
 ```
+Note: when you install package to some kernel, the same kernel of other users will not be modified (it is also true for installation using terminal).
 
 ### In terminal
 if you want to install package to **Python3** kernel:
@@ -28,13 +29,12 @@ or
 python -m install numpy
 ```
 
-if you want to install package to other kernel, first list all enverinments:
+if you want to install package to other kernel, first list all enverinments (*jupyterhub* environment refers to **Python3** kernel):
 ```
 conda env list
 ```
-*jupyterhub* environment refers to **Python3** kernel. 
 ```
-conda activate <env-name>
+conda activate pytorch1.6 
 pip install numpy
 ```
 In order to deactivate conda environment:
@@ -46,4 +46,5 @@ To check which python or pip you use:
 which python
 which pip
 ```
+
 
