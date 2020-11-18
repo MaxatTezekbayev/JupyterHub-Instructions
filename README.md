@@ -8,12 +8,28 @@ There are both JupyterLab and Jupyter Notebook installed on the server. Just cha
 ## How to install python packages
 
 ### In Jupyter Notebook (in cell)
-Best way:
+Not recomended (because it will install package only to **Python3** kernel):
+```
+!pip install numpy
+```
+Best way (because it will install package to the current kernel of notebook):
 ```
 import sys
 !{sys.executable} -m pip install numpy
 ```
-Not recomended (because it will install package to **Python3** kernel:
+
+### In terminal
+if you want to install package to **Python3** kernel:
 ```
-!pip install numpy
+pip install numpy
 ```
+or 
+```
+python -m install numpy
+```
+
+if you want to install package to other kernel, first list all enverinments:
+```
+conda env list
+```
+*jupyterhub* environment refers to **Python3** kernel
